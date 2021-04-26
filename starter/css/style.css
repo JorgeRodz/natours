@@ -1,23 +1,22 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-
 html {
-  box-sizing: border-box; /*Aplicar correctamente box-sizing*/
+  box-sizing: border-box;
+  /*Aplicar correctamente box-sizing*/
   font-size: 62.5%;
 }
-*, *:before, *:after { /*Aplicar correctamente box-sizing*/
-  box-sizing: inherit; /*Aplicar correctamente box-sizing*/
+
+*,
+*:before,
+*:after {
+  /*Aplicar correctamente box-sizing*/
+  box-sizing: inherit;
+  /*Aplicar correctamente box-sizing*/
 }
+
 * {
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -28,18 +27,14 @@ body {
 }
 
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!- header - !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
 .header {
   position: relative;
   height: 95vh;
-  background-image: 
-    linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111, 0.8), 
-      rgba(40, 180, 133, 0.8)), 
-    url("../img/hero.jpg");
-  background-size: cover; /*To fits the img into the viewport*/
-  background-position: top; /* Specifies the initial position of the background image(s) (after any resizing) */
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-size: cover;
+  /*To fits the img into the viewport*/
+  background-position: top;
+  /* Specifies the initial position of the background image(s) (after any resizing) */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 .header__logo-box {
@@ -57,10 +52,10 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
-
   backface-visibility: hidden;
   margin-bottom: 6rem;
 }
@@ -69,7 +64,6 @@ body {
   font-size: 6rem;
   font-weight: 700;
   letter-spacing: 3.5rem;
-
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
@@ -79,7 +73,6 @@ body {
   font-size: 2rem7;
   font-weight: 400;
   letter-spacing: 1.75rem;
-
   animation: moveInRight 1s ease-out;
 }
 
@@ -88,27 +81,22 @@ body {
     opacity: 0;
     transform: translateX(-30rem);
   }
-
   80% {
     transform: translateX(1rem);
   }
-
   100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
-
 @keyframes moveInRight {
   0% {
     opacity: 0;
     transform: translateX(30rem);
   }
-
   80% {
     transform: translateX(-1rem);
   }
-
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -119,13 +107,11 @@ body {
     opacity: 0;
     transform: translateY(3rem);
   }
-
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
 /* btn styled */
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -133,25 +119,29 @@ body {
   display: inline-block;
   padding: 1.5rem 4rem;
   border-radius: 10rem;
-  transition: all .2s;
+  transition: all 0.2s;
   position: relative;
   font-size: 1.6rem;
 }
-
 .btn:hover {
-  transform: translateY(-.3rem);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+  transform: translateY(-0.3rem);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
 }
 .btn:active {
-  transform: translateY(-.1rem);
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
-
 .btn--white {
   background-color: #fff;
   color: #777;
 }
-
+.btn--white::after {
+  background-color: #fff;
+}
 .btn::after {
   content: "";
   display: inline-block;
@@ -162,17 +152,11 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all .4s;
+  transition: all 0.4s;
 }
-.btn--white::after {
-  background-color: #fff;
-}
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-
 .btn--animated {
-  animation: moveInBottom .5s ease-out .75s;
+  animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
 }
+
+/*# sourceMappingURL=style.css.map */
