@@ -1,6 +1,5 @@
 .row {
   max-width: $grid-width;
-  background-color: #eee;
   margin: 0 auto;
 
   &:not(:last-child) {
@@ -11,9 +10,7 @@
 
   [class^="col-"] {
     // Seleccionamos todos los tag html que en su nombre de clase empiecen con la palabra "col-" gracias al ^
-    background-color: #f2425d;
     float: left;
-    color: white;
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
