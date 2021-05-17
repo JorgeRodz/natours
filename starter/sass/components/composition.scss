@@ -31,6 +31,7 @@
     }
   }
 
+  // Hacemos zoom out a las fotos a las cuales no se les esta haciendo hover
   &:hover &__photo:not(:hover) {
     transform: scale(0.95);
   }
