@@ -9,6 +9,7 @@
     url("../img/hero.jpg");
   background-size: cover; /*To fits the img into the viewport*/
   background-position: top; /* Specifies the initial position of the background image(s) (after any resizing) */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
   &__logo-box {
