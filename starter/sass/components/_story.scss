@@ -1,0 +1,54 @@
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+  background-color: $color-white;
+  border-radius: 0.3rem;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: $default-font-size;
+  transform: skewX(-12deg);
+
+  &-container {
+    transform: skewX(12deg);
+  }
+
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+    background-color: orangered;
+
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+
+    transform: translateX(-3rem);
+  }
+
+  &__img {
+    height: 100%;
+  }
+}
+
+.container {
+  padding: 10px;
+  margin: 50px auto;
+  border: 1px solid red;
+  width: 1000px;
+  height: 500px;
+
+  &__figure {
+    float: left;
+    width: 300px;
+    height: 300px;
+    border: 1px solid blue;
+    background-color: pink;
+    shape-outside: circle(50%);
+  }
+
+  &__text {
+    color: red;
+  }
+}
