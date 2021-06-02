@@ -5,3 +5,9 @@
     clear: both;
   }
 }
+
+@mixin label-up {
+  transform: translate(-12%, -95%) scale(0.8);
+  font-weight: 500;
+  cursor: default;
+}

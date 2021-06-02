@@ -1,7 +1,12 @@
 .form {
+  width: 50%;
+  padding: 5rem 5rem;
+
   &__group:not(:last-child) {
     margin-bottom: 3rem;
   }
+
+  // ----- inputs text styles -----
 
   &__input {
     font-size: 1.5rem;
@@ -47,17 +52,23 @@
     transform: translateY(-4rem);
   }
 
-  &__group:last-child {
+  &__group:nth-child(4) {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     width: 90%;
   }
+
+  // ----- inputs radio styles -----
 
   &__radio-group {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &:first-child {
+      margin: 0 15% 0 5%;
+    }
   }
 
   &__radio-label {
@@ -66,6 +77,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  &__radio-input {
+    display: none;
+  }
+
+  &__radio-input:checked ~ &__radio-label > &__radio-button::before {
+    opacity: 1;
   }
 
   &__radio-button {
@@ -80,17 +99,23 @@
     &::before {
       content: "";
       display: block;
-      height: 1.3rem;
-      width: 1.3rem;
+      height: 1.2rem;
+      width: 1.2rem;
       border-radius: 50%;
+      background-color: $color-primary;
+      opacity: 0;
+      transition: opacity 0.2s;
 
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: $color-primary;
-
-      // opacity: 0;
     }
+  }
+
+  // ----- button styles -----
+
+  &__group:last-child {
+    margin-top: 5rem;
   }
 }
