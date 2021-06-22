@@ -5,6 +5,13 @@
   z-index: 9999;
   transition: all 0.3s;
 
+  @supports (-webkit-backdrop-filter: blur(10px)) or
+    (backdrop-filter: blur(10px)) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: rgba($color-black, 0.2);
+  }
+
   // to hidde to popup
   opacity: 0;
   visibility: hidden;
@@ -21,6 +28,22 @@
     & .popup__content {
       opacity: 1;
       transform: translate(-50%, -50%) scale(1);
+
+      @include respond(tablet-landscape) {
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 4rem;
+      }
+
+      @include respond(tablet-portrait) {
+        flex-direction: column;
+        padding: 0;
+        padding-top: 3rem;
+      }
+
+      @include respond(phone) {
+        padding-top: 2rem;
+      }
     }
   }
 
@@ -73,6 +96,7 @@
     border-radius: 0.3rem;
     display: table;
     overflow: hidden; // para esconder las esquinas que sobresalen de las imagenes
+    z-index: 100;
 
     position: absolute;
     top: 50%;
@@ -81,11 +105,20 @@
 
     opacity: 0;
     transition: all 0.5s 0.2s;
+
+    @include respond(phone) {
+      width: 85%;
+    }
   }
 
   &__left {
     width: 33.33333%;
     display: table-cell;
+
+    @include respond(tablet-portrait) {
+      display: flex;
+      justify-content: center;
+    }
   }
   &__img {
     display: block;
@@ -96,6 +129,15 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include respond(tablet-portrait) {
+      width: 100%;
+      text-align: center;
+    }
+
+    @include respond(phone) {
+      padding: 2rem 3rem;
+    }
   }
   &__text {
     font-size: 1.4rem;

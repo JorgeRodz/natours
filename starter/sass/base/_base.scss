@@ -27,3 +27,15 @@ html {
     font-size: 75%; // 1rem = 12 -> 12/16 * 100 = 75.
   }
 }
+body {
+  padding: 1.5%;
+
+  @include respond(tablet-portrait) {
+    padding: 0;
+  }
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
