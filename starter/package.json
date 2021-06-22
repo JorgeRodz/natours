@@ -18,7 +18,7 @@
     "_____commentEnd1": "BUILD PROCCES WORKFLOW -----",
     "_____commentStart2": "SCRIPTS FOR PARCEL V.2 -----",
     "serve": "parcel serve ./index.html",
-    "build": "parcel build ./index.html",
+    "build": "parcel build ./build/index.html",
     "_____commentEnd2": "SCRIPTS FOR PARCEL V.2 -----"
   },
   "keywords": [],
